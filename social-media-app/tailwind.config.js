@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "sosmed-primary-color": "#5699BE",
-        "sosmed-secondary-color": "#ACD9F2",
-        "sosmed-primary-color-dark": "#031F2E",
+        "sosmed-primary-color": "#8ECAE6",
+        "sosmed-secondary-color": "#219EBC",
+        "sosmed-primary-color-dark": "#023047",
+        "alternative-color": "#FFB703",
+        "alternative-color-2": "#FB8500",
+        "background-color": "#E7ECEF",
         "badge-red": "#E70C0C",
         "comment-field": "#B3B3B3",
       },

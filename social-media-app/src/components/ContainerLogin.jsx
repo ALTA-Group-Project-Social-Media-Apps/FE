@@ -1,11 +1,11 @@
 import React from "react";
 
-function ContainerLogin({ children }) {
+function ContainerHome({ children }) {
   return (
-    <div className="w-full h-screen bg-slate-200">
-      <div className="navbar bg-sosmed-primary-color">
+    <div className="w-full h-screen bg-background-color">
+      <div className="navbar bg-white shadow-md">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl text-white">
+          <a className="btn btn-ghost normal-case text-xl font-bold text-sosmed-secondary-color">
             Sosmed Apps
           </a>
         </div>
@@ -13,16 +13,15 @@ function ContainerLogin({ children }) {
           <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
-              className="btn btn-circle border-none bg-white hover:bg-sosmed-secondary-color"
+              className="btn btn-circle border-none bg-white hover:bg-background-color "
             >
               <div className="indicator ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
+                  fill="#5699BE"
                   viewBox="0 0 24 24"
                   strokeWidth={1}
                   stroke="transparent"
-                  fill="#5699BE"
                   className="w-6 h-6"
                 >
                   <path
@@ -39,28 +38,33 @@ function ContainerLogin({ children }) {
             </label>
             <div
               tabIndex={0}
-              className="mt-1 card card-compact dropdown-content w-72 bg-white shadow-lg overflow-auto"
+              className="card card-compact dropdown-content w-72 bg-white shadow-lg overflow-auto border"
             >
               <div className="card-body">
-                <span className="font-bold text-lg text-sosmed-primary-color">
-                  Notification
+                <span className="flex justify-between items-baseline">
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
+                    Notification
+                  </p>
+                  <button className="text-sosmed-secondary-color hover:text-sosmed-primary-color-dark">
+                    Clear all
+                  </button>
                 </span>
-                <span className=" w-full text-sosmed-primary-color space-y-2">
-                  <p>
+                <span className=" w-full flex flex-col text-sosmed-primary-color-dark space-y-2">
+                  <a>
                     <strong>Username</strong> telah mengomentari postingan anda
-                  </p>
-                  <p>
+                  </a>
+                  <a>
                     <strong>Username</strong> telah mengomentari postingan anda
-                  </p>
-                  <p>
+                  </a>
+                  <a>
                     <strong>Username</strong> telah mengomentari postingan anda
-                  </p>
-                  <p>
+                  </a>
+                  <a>
                     <strong>Username</strong> telah mengomentari postingan anda
-                  </p>
+                  </a>
                 </span>
                 <div className="w-full flex justify-center mt-3">
-                  <button className="px-8 py-1 rounded-lg bg-sosmed-primary-color text-white border-2 hover:bg-white hover:border-sosmed-primary-color hover:text-sosmed-primary-color">
+                  <button className="px-8 py-1 rounded-lg bg-white text-sosmed-secondary-color border-2 border-sosmed-secondary-color hover:bg-sosmed-secondary-color hover:border-white hover:text-white">
                     Loadmore
                   </button>
                 </div>
@@ -75,16 +79,13 @@ function ContainerLogin({ children }) {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-white shadow-lg"
+              className="menu menu-compact w-40 dropdown-content p-2 rounded-box border bg-white shadow-lg text-sosmed-primary-color-dark"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+                <a>My Profile</a>
               </li>
               <li>
-                <a>Settings</a>
+                <a>Darkmode</a>
               </li>
               <li>
                 <a>Logout</a>
@@ -98,4 +99,41 @@ function ContainerLogin({ children }) {
   );
 }
 
-export default ContainerLogin;
+function ContainerLogin({ children }) {
+  return (
+    <div className="w-full h-screen bg-background-color">
+      <div className="navbar flex justify-between bg-white shadow-md">
+        <a className="btn btn-ghost normal-case text-xl font-bold text-sosmed-secondary-color">
+          Sosmed App
+        </a>
+        <label
+          htmlFor="my-modal-3"
+          className="px-6 py-1 border-2 rounded-md border-sosmed-secondary-color font-semibold text-sosmed-secondary-color hover:bg-sosmed-secondary-color hover:text-white mr-6 cursor-pointer"
+        >
+          Login
+        </label>
+        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box relative">
+            <label
+              htmlFor="my-modal-3"
+              className="btn btn-sm btn-circle absolute right-2 top-2"
+            >
+              ✕
+            </label>
+            <h3 className="text-lg font-bold">
+              Congratulations random Internet user!
+            </h3>
+            <p className="py-4">
+              You've been selected for a chance to get one year of subscription
+              to use Wikipedia for free!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>{children}</div>
+    </div>
+  );
+}
+
+export default (ContainerHome, ContainerLogin);
