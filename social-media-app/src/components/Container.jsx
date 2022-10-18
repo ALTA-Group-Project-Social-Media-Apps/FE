@@ -64,10 +64,76 @@ function ContainerHome({ children }) {
                   </a>
                 </span>
                 <div className="w-full flex justify-center mt-3">
-                  <button className="px-8 py-1 rounded-lg bg-white text-sosmed-secondary-color border-2 border-sosmed-secondary-color hover:bg-sosmed-secondary-color hover:border-white hover:text-white">
+                  <label
+                    htmlFor="my-modal-3"
+                    className="px-8 py-1 rounded-lg bg-white text-sosmed-secondary-color border-2 border-sosmed-secondary-color cursor-pointer  hover:bg-sosmed-secondary-color hover:border-white hover:text-white"
+                  >
                     Loadmore
-                  </button>
+                  </label>
                 </div>
+              </div>
+            </div>
+          </div>
+          <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+          <div className="modal">
+            <div className="modal-box relative bg-white">
+              <label
+                htmlFor="my-modal-3"
+                className="btn btn-sm btn-circle bg-transparent border-none text-sosmed-primary-color-dark text-lg font-bold hover:bg-white hover:text-sosmed-secondary-color absolute right-2 top-2"
+              >
+                ✕
+              </label>
+              <h3 className="text-xl font-bold  text-sosmed-primary-color-dark">
+                Notification
+              </h3>
+              <ul>
+                <li className="py-4 flex items-center justify-between">
+                  <div className="w-12 rounded-full">
+                    <img
+                      className="rounded-full"
+                      src="https://placeimg.com/80/80/people"
+                    />
+                  </div>
+                  <a className="w-80  text-black">
+                    <strong>Username</strong> telah mengomentari postingan anda
+                  </a>
+                  <button className=" text-sosmed-primary-color-dark hover:text-sosmed-secondary-color">
+                    Hapus
+                  </button>
+                </li>
+                <li className="py-4 flex items-center justify-between">
+                  <div className="w-12 rounded-full">
+                    <img
+                      className="rounded-full"
+                      src="https://placeimg.com/80/80/people"
+                    />
+                  </div>
+                  <a className="w-80  text-black">
+                    <strong>Username</strong> telah mengomentari postingan anda
+                  </a>
+                  <button className=" text-sosmed-primary-color-dark hover:text-sosmed-secondary-color">
+                    Hapus
+                  </button>
+                </li>
+              </ul>
+              <div className="w-full flex justify-center">
+                <button className="flex gap-1.5 items-center px-14 py-2 border-2 rounded-lg text-lg font-semibold bg-sosmed-secondary-color text-white border-sosmed-secondary-color hover:bg-white hover:text-sosmed-secondary-color">
+                  Clear All
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-5 h-5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -136,4 +202,4 @@ function ContainerLogin({ children }) {
   );
 }
 
-export default (ContainerHome, ContainerLogin);
+export default ContainerHome;

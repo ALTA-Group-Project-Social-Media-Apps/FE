@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerLogin from "../components/ContainerLogin";
+import ContainerHome from "../components/Container";
 
 function Home() {
   return (
-    <ContainerLogin>
+    <ContainerHome>
       <div>Home</div>
-    </ContainerLogin>
+    </ContainerHome>
   );
 }
 
