@@ -1,5 +1,5 @@
 import React from "react";
-import ContainerHome from "../components/Container";
+import { ContainerHome } from "../components/Container";
 
 function Home() {
   return (

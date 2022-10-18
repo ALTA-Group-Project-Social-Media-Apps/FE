@@ -202,4 +202,4 @@ function ContainerLogin({ children }) {
   );
 }
 
-export default ContainerHome;
+export { ContainerHome, ContainerLogin };
